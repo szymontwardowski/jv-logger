@@ -19,7 +19,8 @@ public class Main {
         try {
             user = authenticationService.login(login, "1234");
         } catch (AuthenticationException e) {
-            logger.error("could not log in user bob", e);
+            // Placeholder {} sprawia, że log jest dynamiczny i informacyjny
+            logger.error("Could not log in user: {}", login, e);
             return;
         }
         OrderService orderService = new OrderServiceImpl();
